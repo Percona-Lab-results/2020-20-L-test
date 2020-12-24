@@ -1,0 +1,3 @@
+kubectl run ubut   --image mlabbe/iperf3 --overrides='{ "apiVersion": "v1", "spec": { "nodeSelector": { "kubernetes.io/hostname": "lke15505-18914-5fe0db6826ba" } } }' --generator=run-pod/v1 -- -s
+
+kubectl run ubut1 --rm -i --tty --image mlabbe/iperf3 --overrides='{ "apiVersion": "v1", "spec": { "nodeSelector": { "kubernetes.io/hostname": "lke15505-18914-5fe0db684cea" } } }' --generator=run-pod/v1 -- -c 192.168.206.92
